@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 36 36" width="36" height="36">
+  <!-- Rounded square background box -->
+  <rect x="0" y="0" width="36" height="36" rx="9" ry="9" fill="#0f172a" />
+  
+  <!-- Centered House outline icon with interior chevron/door -->
+  <g transform="translate(7, 7)">
+    <path d="M11 2.5 L2 9.5 L2 19.5 L20 19.5 L20 9.5 Z" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+    <polyline points="8 19.5 8 11.5 14 11.5 14 19.5" fill="none" stroke="#ffffff" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+  </g>
+</svg>

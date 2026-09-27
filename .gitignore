@@ -1,0 +1,24 @@
+# Backend - Build files
+RentEase-Backend/target/
+
+# Backend - Eclipse files
+RentEase-Backend/.settings/
+RentEase-Backend/.classpath
+RentEase-Backend/.project
+RentEase-Backend/.factorypath
+
+# Backend - Local secrets
+RentEase-Backend/src/main/resources/application.properties
+
+# Frontend - Dependencies
+RentEase-Frontend/node_modules/
+
+# Frontend - Build files
+RentEase-Frontend/dist/
+
+# IDE / OS files
+.vscode/
+.idea/
+*.log
+.DS_Store
+Thumbs.db

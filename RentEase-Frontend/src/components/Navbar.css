@@ -1,0 +1,373 @@
+/* ==========================================================================
+   RentEase Design System — Navbar.css
+   Reusable Navigation Bar for RentEase Application
+   ========================================================================== */
+
+:root {
+    --re-brand-primary: #0f172a;
+    /* Midnight slate */
+    --re-brand-accent: #2563eb;
+    /* PropTech azure */
+    --re-brand-accent-hover: #1d4ed8;
+    /* Darker hover state */
+    --re-bg-canvas: #f8fafc;
+    --re-surface-card: #ffffff;
+    --re-border-subtle: #e2e8f0;
+    --re-border-hover: #cbd5e1;
+    --re-text-heading: #0f172a;
+    --re-text-body: #334155;
+    --re-text-muted: #64748b;
+    --re-radius-sm: 8px;
+    --re-radius-md: 10px;
+    --re-radius-lg: 16px;
+    --re-shadow-nav: 0 1px 3px 0 rgba(15, 23, 42, 0.05), 0 1px 2px -1px rgba(15, 23, 42, 0.05);
+    --re-transition-smooth: all 0.18s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Navbar Wrapper */
+.rentease-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    background-color: #ffffff;
+    border-bottom: 1px solid var(--re-border-subtle);
+    box-shadow: var(--re-shadow-nav);
+    font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    color: var(--re-text-body);
+}
+
+/* Inner Container */
+.rentease-nav-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+    height: 68px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+/* Brand / Logo Section */
+.rentease-nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    cursor: pointer;
+    user-select: none;
+}
+
+.rentease-brand-icon {
+    width: 34px;
+    height: 34px;
+    border-radius: var(--re-radius-sm);
+    background: linear-gradient(135deg, var(--re-brand-primary) 0%, #1e293b 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    box-shadow: 0 2px 6px rgba(15, 23, 42, 0.15);
+    flex-shrink: 0;
+    transition: var(--re-transition-smooth);
+}
+
+.rentease-nav-brand:hover .rentease-brand-icon {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.2);
+}
+
+.rentease-brand-name {
+    font-size: 19px;
+    font-weight: 700;
+    letter-spacing: -0.03em;
+    color: var(--re-brand-primary);
+    margin: 0;
+}
+
+.rentease-brand-name span {
+    color: var(--re-brand-accent);
+}
+
+/* Navigation Menu Links (Desktop) */
+.rentease-nav-menu {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.rentease-nav-link {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--re-text-body);
+    text-decoration: none;
+    padding: 8px 12px;
+    border-radius: var(--re-radius-sm);
+    transition: var(--re-transition-smooth);
+}
+
+.rentease-nav-link:hover {
+    color: var(--re-text-heading);
+    background-color: #f8fafc;
+}
+
+.rentease-nav-link.active {
+    color: var(--re-brand-accent);
+    font-weight: 600;
+}
+
+/* Right Side Actions / Authentication */
+.rentease-nav-actions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 12px;
+    min-height: 40px;
+    min-width: 170px;
+    /* Reserves space so layout never recalculates/jerks horizontally */
+}
+
+/* Action Links & Buttons */
+.rentease-btn-link {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--re-text-body);
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: var(--re-radius-md);
+    transition: var(--re-transition-smooth);
+}
+
+.rentease-btn-link:hover {
+    color: var(--re-text-heading);
+    background-color: #f1f5f9;
+}
+
+.rentease-btn-primary {
+    font-size: 14px;
+    font-weight: 600;
+    color: #ffffff;
+    background-color: var(--re-brand-primary);
+    text-decoration: none;
+    padding: 9px 18px;
+    border-radius: var(--re-radius-md);
+    border: none;
+    box-shadow: 0 2px 5px rgba(15, 23, 42, 0.12);
+    transition: var(--re-transition-smooth);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.rentease-btn-primary:hover {
+    background-color: #1e293b;
+    box-shadow: 0 4px 10px rgba(15, 23, 42, 0.16);
+    transform: translateY(-1px);
+}
+
+/* Profile Item & Avatar */
+.rentease-profile-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    padding: 4px 10px 4px 6px;
+    border-radius: var(--re-radius-md);
+    border: 1px solid transparent;
+    transition: var(--re-transition-smooth);
+}
+
+.rentease-profile-link:hover,
+.rentease-profile-link.active {
+    background-color: #f1f5f9;
+    border-color: var(--re-border-subtle);
+}
+
+/* Professional Initials Avatar in Navbar */
+.rentease-nav-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(135deg, #1d4ed8 0%, #2563eb 100%);
+    border: 1.5px solid #ffffff;
+    box-shadow: 0 1px 4px rgba(37, 99, 235, 0.25);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+    text-transform: uppercase;
+    flex-shrink: 0;
+    user-select: none;
+}
+
+.rentease-avatar {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.rentease-avatar-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.rentease-profile-label {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--re-text-heading);
+}
+
+/* Logout Button */
+.rentease-btn-logout {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    background: transparent;
+    border: 1px solid var(--re-border-subtle);
+    color: var(--re-text-muted);
+    font-family: inherit;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: var(--re-radius-md);
+    cursor: pointer;
+    transition: var(--re-transition-smooth);
+}
+
+.rentease-btn-logout:hover {
+    background-color: #fef2f2;
+    border-color: #fecaca;
+    color: #dc2626;
+}
+
+/* Hamburger Toggle Button (Mobile) */
+.rentease-menu-toggle {
+    display: none;
+    background: transparent;
+    border: 1px solid var(--re-border-subtle);
+    padding: 7px;
+    border-radius: var(--re-radius-sm);
+    color: var(--re-text-heading);
+    cursor: pointer;
+    align-items: center;
+    justify-content: center;
+    transition: var(--re-transition-smooth);
+}
+
+.rentease-menu-toggle:hover {
+    background-color: #f1f5f9;
+}
+
+/* Mobile Dropdown Drawer */
+.rentease-mobile-drawer {
+    display: none;
+}
+
+/* ==========================================================================
+   Responsive Breakpoints
+   ========================================================================== */
+@media (max-width: 768px) {
+    .rentease-nav-container {
+        padding: 0 16px;
+        height: 62px;
+    }
+
+    /* Hide desktop horizontal menus */
+    .rentease-nav-menu,
+    .rentease-nav-actions {
+        display: none;
+    }
+
+    /* Show mobile hamburger toggle */
+    .rentease-menu-toggle {
+        display: flex;
+    }
+
+    /* Mobile Drawer Container */
+    .rentease-mobile-drawer {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+        background-color: #ffffff;
+        border-top: 1px solid var(--re-border-subtle);
+        padding: 16px;
+        box-shadow: 0 8px 16px -4px rgba(15, 23, 42, 0.08);
+        animation: renteaseFadeIn 0.2s ease-out;
+    }
+
+    .rentease-mobile-menu {
+        display: flex;
+        flex-direction: column;
+        gap: 4px;
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    .rentease-mobile-menu .rentease-nav-link {
+        display: flex;
+        align-items: center;
+        padding: 10px 14px;
+        font-size: 15px;
+        border-radius: var(--re-radius-md);
+    }
+
+    .rentease-mobile-menu .rentease-nav-link.active {
+        background-color: #eff6ff;
+    }
+
+    .rentease-mobile-divider {
+        height: 1px;
+        background-color: var(--re-border-subtle);
+        margin: 4px 0;
+    }
+
+    .rentease-mobile-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .rentease-mobile-actions .rentease-btn-link,
+    .rentease-mobile-actions .rentease-btn-primary,
+    .rentease-mobile-actions .rentease-btn-logout {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+        padding: 11px 16px;
+        font-size: 14.5px;
+    }
+
+    .rentease-mobile-actions .rentease-profile-link {
+        width: 100%;
+        box-sizing: border-box;
+        padding: 10px 12px;
+        background-color: #f8fafc;
+        border: 1px solid var(--re-border-subtle);
+    }
+}
+
+@keyframes renteaseFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
